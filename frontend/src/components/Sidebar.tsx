@@ -46,7 +46,10 @@ export default function Sidebar({ state, onRouteCalculated, routeDetails }: Side
           visitors: d.Total_Visitors / 1000000 
         }));
         chartData.push({ name: '2028 (AI)', visitors: data.prediction_2028 / 1000000 });
-        setInsights(chartData);
+        setInsights({
+          chartData: chartData,
+          historical_risks: data.historical_risks || []
+        });
       })
       .catch(console.error);
   }, []);
@@ -213,7 +216,7 @@ export default function Sidebar({ state, onRouteCalculated, routeDetails }: Side
               <div style={{ height: '250px', width: '100%' }}>
                 {insights ? (
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={insights}>
+                    <LineChart data={insights.chartData}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" />
                       <XAxis dataKey="name" stroke="#888" fontSize={12} />
                       <YAxis stroke="#888" fontSize={12} />
