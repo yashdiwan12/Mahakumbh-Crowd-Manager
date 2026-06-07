@@ -37,7 +37,10 @@ export default function Sidebar({ state, onRouteCalculated, routeDetails }: Side
   }, [alerts]);
 
   useEffect(() => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
+    let apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
+    if (apiUrl.endsWith('/')) apiUrl = apiUrl.slice(0, -1);
+    if (!apiUrl.endsWith('/api')) apiUrl = `${apiUrl}/api`;
+    
     fetch(`${apiUrl}/insights`)
       .then(res => res.json())
       .then(data => {
@@ -58,7 +61,10 @@ export default function Sidebar({ state, onRouteCalculated, routeDetails }: Side
     if (!sourceId || !targetId) return;
     setLoadingRoute(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
+      let apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
+      if (apiUrl.endsWith('/')) apiUrl = apiUrl.slice(0, -1);
+      if (!apiUrl.endsWith('/api')) apiUrl = `${apiUrl}/api`;
+      
       const res = await fetch(`${apiUrl}/route?source_id=${sourceId}&target_id=${targetId}`);
       const data = await res.json();
       if (data.path) {
