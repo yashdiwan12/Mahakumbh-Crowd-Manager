@@ -2,7 +2,7 @@
 
 > An autonomous, AI-powered crowd routing and safety control room for the world's largest human gathering.
 
-Built with **Next.js**, **FastAPI**, **Google Maps API**, and **Machine Learning** — this platform monitors real-time crowd density across major Ghats in Prayagraj and autonomously reroutes pilgrims away from stampede-risk zones using a dynamic **A\* Search Algorithm**.
+Built with **Next.js**, **FastAPI**, **Google Maps API**, and **Machine Learning** — this platform monitors real-time crowd density across major Ghats in Ujjain and autonomously reroutes pilgrims away from stampede-risk zones using a dynamic **A\* Search Algorithm**.
 
 ---
 
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 cp ../.env.example .env
 # Edit .env and add your GOOGLE_MAPS_API_KEY
 
-# Seed the database with Prayagraj Ghat coordinates
+# Seed the database with Ujjain Ghat coordinates
 python seed_database.py
 
 # Start the server
