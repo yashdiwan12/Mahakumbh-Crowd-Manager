@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+psycopg2-binary
+pydantic
+python-dotenv
+requests
+websockets
+networkx
+pandas
+openpyxl
+scikit-learn
+googlemaps

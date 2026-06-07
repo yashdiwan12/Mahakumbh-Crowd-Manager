@@ -1,0 +1,28 @@
+# Backend
+__pycache__/
+*.py[cod]
+*.venv
+.venv/
+*.db
+*.pkl
+
+# Node
+node_modules/
+.next/
+
+# Env (NEVER commit real keys)
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.log
