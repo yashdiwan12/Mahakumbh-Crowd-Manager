@@ -10,15 +10,15 @@ engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 
 GHATS = [
-    {"id": str(uuid.uuid4()), "name": "Triveni Sangam", "lat": 25.4310, "lng": 81.8850, "cap": 500000},
-    {"id": str(uuid.uuid4()), "name": "Dashashwamedh Ghat", "lat": 25.4320, "lng": 81.8650, "cap": 250000},
-    {"id": str(uuid.uuid4()), "name": "Kila Ghat (Allahabad Fort)", "lat": 25.4300, "lng": 81.8750, "cap": 150000},
-    {"id": str(uuid.uuid4()), "name": "Arail Ghat", "lat": 25.4200, "lng": 81.8850, "cap": 120000},
-    {"id": str(uuid.uuid4()), "name": "Saraswati Ghat", "lat": 25.4280, "lng": 81.8600, "cap": 100000},
-    {"id": str(uuid.uuid4()), "name": "Rasulabad Ghat", "lat": 25.4850, "lng": 81.8500, "cap": 80000},
-    {"id": str(uuid.uuid4()), "name": "Prayagraj Junction (Transit)", "lat": 25.4430, "lng": 81.8280, "cap": 350000},
-    {"id": str(uuid.uuid4()), "name": "Civil Lines Bus Stand", "lat": 25.4540, "lng": 81.8350, "cap": 180000},
-    {"id": str(uuid.uuid4()), "name": "Jhusi (Sector 14)", "lat": 25.4350, "lng": 81.9050, "cap": 200000},
+    {"id": str(uuid.uuid4()), "name": "Ram Ghat", "lat": 23.1830, "lng": 75.7660, "cap": 500000},
+    {"id": str(uuid.uuid4()), "name": "Mahakaleshwar Temple", "lat": 23.1827, "lng": 75.7682, "cap": 250000},
+    {"id": str(uuid.uuid4()), "name": "Harsiddhi Temple", "lat": 23.1800, "lng": 75.7640, "cap": 150000},
+    {"id": str(uuid.uuid4()), "name": "Mangalnath Temple", "lat": 23.2100, "lng": 75.7850, "cap": 120000},
+    {"id": str(uuid.uuid4()), "name": "Kal Bhairav Temple", "lat": 23.2200, "lng": 75.7800, "cap": 100000},
+    {"id": str(uuid.uuid4()), "name": "Ujjain Junction (Transit)", "lat": 23.1700, "lng": 75.7800, "cap": 350000},
+    {"id": str(uuid.uuid4()), "name": "Nanakheda Bus Stand", "lat": 23.1500, "lng": 75.7750, "cap": 180000},
+    {"id": str(uuid.uuid4()), "name": "Triveni Ghat (Shipra)", "lat": 23.1600, "lng": 75.7600, "cap": 200000},
+    {"id": str(uuid.uuid4()), "name": "Sandipani Ashram", "lat": 23.2150, "lng": 75.7830, "cap": 80000},
 ]
 
 def haversine(lat1, lon1, lat2, lon2):

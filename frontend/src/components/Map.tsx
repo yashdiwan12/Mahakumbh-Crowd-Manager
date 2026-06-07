@@ -70,7 +70,7 @@ function InnerMap({ onStateUpdate, activeRoute, onRouteDetailsUpdate }: InnerMap
   useEffect(() => {
     if (ref.current && !mapRef.current) {
       mapRef.current = new window.google.maps.Map(ref.current, {
-        center: { lat: 25.4358, lng: 81.8463 },
+        center: { lat: 23.1765, lng: 75.7885 },
         zoom: 13,
         styles: mapStyles,
         disableDefaultUI: true,
@@ -82,10 +82,10 @@ function InnerMap({ onStateUpdate, activeRoute, onRouteDetailsUpdate }: InnerMap
 
       // Add Emergency Resource Markers
       const resources = [
-        { lat: 25.430, lng: 81.880, title: 'NDRF Base Alpha', color: '#ff0055' },
-        { lat: 25.433, lng: 81.860, title: 'Medical Camp 1', color: '#00ff55' },
-        { lat: 25.441, lng: 81.826, title: 'Police Transit Post', color: '#0055ff' },
-        { lat: 25.421, lng: 81.883, title: 'NDRF Base Beta', color: '#ff0055' },
+        { lat: 23.1800, lng: 75.7700, title: 'NDRF Base Alpha', color: '#ff0055' },
+        { lat: 23.1850, lng: 75.7650, title: 'Medical Camp 1', color: '#00ff55' },
+        { lat: 23.1750, lng: 75.7850, title: 'Police Transit Post', color: '#0055ff' },
+        { lat: 23.2000, lng: 75.7800, title: 'NDRF Base Beta', color: '#ff0055' },
       ];
       resources.forEach(r => {
           new window.google.maps.Marker({

@@ -18,8 +18,8 @@ router = APIRouter()
 async def get_insights():
     try:
         df = pd.read_excel("../Mahakumbh_Complete_Dataset.csv", engine="openpyxl")
-        # Ensure we filter for Prayagraj
-        df = df[df['Location'].str.contains('Prayagraj', case=False, na=False)]
+        # Ensure we filter for Ujjain
+        df = df[df['Location'].str.contains('Ujjain', case=False, na=False)]
         
         # Aggregate total visitors by year
         df['Total_Visitors'] = df['Domestic_Visitors'] + df['International_Visitors']
@@ -29,8 +29,8 @@ async def get_insights():
             "historical_data": historical,
             "prediction_2028": 39342804,
             "historical_risks": [
-                {"date": "10 Feb 2013", "event": "Mauni Amavasya Stampede", "weather": "Clear", "safety_index": 12, "advice": "Avoid peak bathing days when capacity exceeds 150%. Plan travel 2 days prior."},
-                {"date": "24 Jan 2001", "event": "Sudden Downpour", "weather": "Heavy Rain", "safety_index": 35, "advice": "Pontoon bridges become highly slippery. Avoid transit during heavy rain alerts."}
+                {"date": "22 Apr 2016", "event": "Simhastha Shahi Snan Incident", "weather": "Clear", "safety_index": 12, "advice": "Avoid peak bathing days when capacity exceeds 150%. Plan travel 2 days prior."},
+                {"date": "05 May 2016", "event": "Sudden Downpour", "weather": "Heavy Rain", "safety_index": 35, "advice": "Shipra River bridges become highly slippery. Avoid transit during heavy rain alerts."}
             ]
         }
     except Exception as e:
@@ -44,8 +44,8 @@ async def get_insights():
             ],
             "prediction_2028": 39342804,
             "historical_risks": [
-                {"date": "10 Feb 2013", "event": "Mauni Amavasya Stampede", "weather": "Clear", "safety_index": 12, "advice": "Avoid peak bathing days when capacity exceeds 150%. Plan travel 2 days prior."},
-                {"date": "24 Jan 2001", "event": "Sudden Downpour", "weather": "Heavy Rain", "safety_index": 35, "advice": "Pontoon bridges become highly slippery. Avoid transit during heavy rain alerts."}
+                {"date": "22 Apr 2016", "event": "Simhastha Shahi Snan Incident", "weather": "Clear", "safety_index": 12, "advice": "Avoid peak bathing days when capacity exceeds 150%. Plan travel 2 days prior."},
+                {"date": "05 May 2016", "event": "Sudden Downpour", "weather": "Heavy Rain", "safety_index": 35, "advice": "Shipra River bridges become highly slippery. Avoid transit during heavy rain alerts."}
             ]
         }
 
